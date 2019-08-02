@@ -30,17 +30,13 @@ SELECT `name`
 FROM  `Facilities` 
 WHERE membercost >0
 
-Tennis Court 1
-Tennis Court 2
-Massage Room 1
-Massage Room 2
-Squash Court
+
 
 /* Q2: How many facilities do not charge a fee to members? */
 SELECT COUNT(  `name` ) 
 FROM  `Facilities` 
 WHERE membercost =0
---> 4
+
 
 /* Q3: How can you produce a list of facilities that charge a fee to members,
 where the fee is less than 20% of the facility's monthly maintenance cost?
@@ -133,13 +129,6 @@ ORDER BY s.totalcost DESC
 /* Q10: Produce a list of facilities with a total revenue less than 1000.
 The output of facility name and total revenue, sorted by revenue. Remember
 that there's a different cost for guests and members! */
-Table Tennis
-180.0
-Snooker Table
-240.0
-Pool Table
-270.0
-
 
 SELECT facname, SUM( totalcost ) AS totalrevenue
 FROM (
